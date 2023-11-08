@@ -1,10 +1,10 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import PageA from './component/PageA'
-import PageB from './component/PageB'
-import PageC from './component/PageC'
+import HomePage from './component/HomePage'
+import ProfilePage from './component/ProfilePage'
+
 
 // package necessaire pour la navigation :
 // npm install @react-navigation/native
@@ -16,10 +16,9 @@ const Stack = createNativeStackNavigator()
 export default function App() {
   return (
     <NavigationContainer>
-        <Stack.Navigator initialRouteName='PageC'>
-            <Stack.Screen name='PageA' component={PageA} />
-            <Stack.Screen name='PageB' component={PageB} />
-            <Stack.Screen name='PageC' component={PageC} options={{headerShown : false}} />
+        <Stack.Navigator initialRouteName='HomePage'>
+            <Stack.Screen name='HomePage' component={HomePage} options={{title : "Liste de contacts"}}/>
+            <Stack.Screen name='ProfilePage' component={ProfilePage} options={{title : "Profil"}}/>
         </Stack.Navigator>
     </NavigationContainer>
   )
