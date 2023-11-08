@@ -2,14 +2,14 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
 export default function ProfilePage({navigation, route}) {
-  const text = route.params.text
+  const profil = route.params.profil
 
   return (
     <View>
-      <Text>{text.firstname}</Text>
-      <Text>{text.lastname}</Text>
-      <Text>{text.email}</Text>
-      <Text>{text.phone}</Text>
+      <Text>Prénom: {profil.firstname}</Text>
+      <Text>Nom: {profil.lastname}</Text>
+      <Text>Email: {profil.email}</Text>
+      <Text>Téléphone: {profil.phone}</Text>
     </View>
   )
 }
