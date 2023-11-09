@@ -1,21 +1,21 @@
-import { Button, StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Button } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 
-export default function Home() {
+export default function Contact() {
 
-  const navigation = useNavigation()
+    const navigation = useNavigation()
 
   return (
     <View>
-      <Text>Home</Text>
+      <Text>Contact</Text>
       <Button
       title='Open Drawer'
       onPress={() => navigation.openDrawer()}
       />
       <Button
-      title='Go to Contact'
-      onPress={() => navigation.navigate("Contact")}
+      title='HomePage'
+      onPress={() => navigation.navigate("Home")}
       />
     </View>
   )
