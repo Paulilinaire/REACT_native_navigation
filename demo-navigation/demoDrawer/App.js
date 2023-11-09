@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createDrawerNavigator } from '@react-navigation/drawer'
@@ -12,7 +12,7 @@ export default function App() {
     <NavigationContainer>
         <Drawer.Navigator>
             <Drawer.Screen name='Home' component={Home} />
-            <Drawer.Screen name='About' component={About} />
+            <Drawer.Screen name='About' component={About}/>
         </Drawer.Navigator>
     </NavigationContainer>
   )
