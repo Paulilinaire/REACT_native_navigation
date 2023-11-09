@@ -22,7 +22,7 @@ export default function App() {
     useEffect(() => {
         axios.get('http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=vDOKZJIZJer5jd3EUl7UfWMTKwPQm0vd&q=15.8%2C8.00&language=en-us&details=false&toplevel=false')
         .then(response => {
-            const data = response.data.LocolizedName
+            const data = response.data.LocalizedName
             setCity(data)
         })
     },[])
@@ -31,7 +31,7 @@ export default function App() {
     <SafeAreaView>
       <Text>Latitude : {latitude}</Text>
       <Text>Longitude : {longitude}</Text>
-      <Text>Ville: {data}</Text>
+      <Text>Ville: {city}</Text>
     </SafeAreaView>
   )
 }
